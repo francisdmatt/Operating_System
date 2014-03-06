@@ -1,0 +1,510 @@
+Script started on Wed 24 Apr 2013 01:10:27 PM CDT
+]0;cs441104@cs:~/os_part5[cs441104@cs os_part5]$ ls
+a.out  instructions.h  os_part5.c  sampleRun.txt  userPrograms.txt
+]0;cs441104@cs:~/os_part5[cs441104@cs os_part5]$ a.out
+
+	Creating FAT
+To run a program, type 'run programName'
+Valid program names: 'user1' or 'user2'
+
+
+User 1: run
+user1
+
+Priority 2 request added
+
+User 1 Running...
+	Load
+	Store
+	Load
+
+User 1 process moved to rear of queue 2
+
+Priority Queues
+---------------
+One:   
+Two:   0   
+
+
+User 2: run user2
+
+Priority 2 request added
+
+User 1 Running...
+	Add Register
+	Store
+	Halt
+Execution complete.
+
+User 1 Page Table
+Page 	| 	Frame
+0 	| 	39
+		156:	x080A    
+		157:	x1006    
+		158:	x0905    
+		159:	x4100    
+1 	| 	6
+		24:	x1007    
+		25:	xF000    
+		26:	x000A    
+		27:	x000F    
+
+User 1 process removed from queue 2
+User 2 process promoted to priority 1
+
+Priority Queues
+---------------
+One:   2   
+Two:   
+
+
+Operating System: dmp
+
+---------------------------------
+	DUMP START
+---------------------------------
+
+Clock: 8
+
+REGISTERS
+---------------------------------
+A	x000F    
+1	x0005    
+2	x0000    
+3	x0000    
+PC	x001A    
+CC	x0001    
+IR	xF000    
+
+MEMORY
+---------------------------------
+24 	x1007    UNLOCKED
+25 	xF000    UNLOCKED
+26 	x000A    UNLOCKED
+27 	x000F    UNLOCKED
+156	x080A    UNLOCKED
+157	x1006    UNLOCKED
+158	x0905    UNLOCKED
+159	x4100    UNLOCKED
+
+DISK
+---------------------------------
+0  	x080A    
+1  	x1006    
+2  	x0905    
+3  	x4100    
+4  	x1007    
+5  	xF000    
+6  	x0000    
+7  	x0000    
+
+Priority Queues
+---------------
+One:   2   
+Two:   
+
+---------------------------------
+	DUMP COMPLETE
+---------------------------------
+
+User 2 Running...
+	Load
+	Store
+	Load
+
+User 2 process demoted to priority 2
+
+Priority Queues
+---------------
+One:   
+Two:   0   
+
+
+User 1: run user1
+
+Priority 2 request added
+
+User 2 Running...
+	Subtract Register
+	Store
+	Halt
+Execution complete.
+
+User 2 Page Table
+Page 	| 	Frame
+0 	| 	41
+		164:	x0819    
+		165:	x1006    
+		166:	x0905    
+		167:	x5100    
+1 	| 	51
+		204:	x1007    
+		205:	xF000    
+		206:	x0019    
+		207:	x0014    
+
+User 2 process removed from queue 2
+User 1 process promoted to priority 1
+
+Priority Queues
+---------------
+One:   1   
+Two:   
+
+
+User 2: run user2
+
+Priority 2 request added
+
+User 1 Running...
+	Load
+	Store
+	Load
+
+User 1 process demoted to priority 2
+User 2 process promoted to priority 1
+
+Priority Queues
+---------------
+One:   2   
+Two:   0   
+
+
+Operating System: nop
+
+No request added
+
+User 2 Running...
+	Load
+	Store
+	Load
+
+User 2 process demoted to priority 2
+
+Priority Queues
+---------------
+One:   
+Two:   0   1   
+
+
+User 1: run user1
+
+Priority 2 request added
+
+User 1 Running...
+	Add Register
+	Store
+	Halt
+Execution complete.
+
+User 1 Page Table
+Page 	| 	Frame
+0 	| 	17
+		68:	x080A    
+		69:	x1006    
+		70:	x0905    
+		71:	x4100    
+1 	| 	63
+		252:	x1007    
+		253:	xF000    
+		254:	x000A    
+		255:	x000F    
+
+User 1 process removed from queue 2
+
+Priority Queues
+---------------
+One:   
+Two:   0   1   
+
+
+User 2: run user2
+
+Priority 2 request added
+
+User 2 Running...
+	Subtract Register
+	Store
+	Halt
+Execution complete.
+
+User 2 Page Table
+Page 	| 	Frame
+0 	| 	10
+		40:	x0819    
+		41:	x1006    
+		42:	x0905    
+		43:	x5100    
+1 	| 	44
+		176:	x1007    
+		177:	xF000    
+		178:	x0019    
+		179:	x0014    
+
+User 2 process removed from queue 2
+User 1 process promoted to priority 1
+
+Priority Queues
+---------------
+One:   1   
+Two:   0   
+
+
+Operating System: nop
+
+No request added
+
+User 1 Running...
+	Load
+	Store
+	Load
+
+User 1 process demoted to priority 2
+User 2 process promoted to priority 1
+
+Priority Queues
+---------------
+One:   2   
+Two:   0   
+
+
+User 1: run user1
+
+Priority 2 request added
+
+User 2 Running...
+	Load
+	Store
+	Load
+
+User 2 process demoted to priority 2
+
+Priority Queues
+---------------
+One:   
+Two:   0   1   2   
+
+
+User 2: run us      nop
+
+No request added
+
+User 1 Running...
+	Add Register
+	Store
+	Halt
+Execution complete.
+
+User 1 Page Table
+Page 	| 	Frame
+0 	| 	41
+		164:	x080A    
+		165:	x1006    
+		166:	x0905    
+		167:	x4100    
+1 	| 	13
+		52:	x1007    
+		53:	xF000    
+		54:	x000A    
+		55:	x000F    
+
+User 1 process removed from queue 2
+User 1 process promoted to priority 1
+
+Priority Queues
+---------------
+One:   1   
+Two:   0   
+
+
+Operating System: nop
+
+No request added
+
+User 1 Running...
+	Load
+	Store
+	Load
+
+User 1 process demoted to priority 2
+
+Priority Queues
+---------------
+One:   
+Two:   0   1   
+
+
+User 1: nop
+
+No request added
+
+User 2 Running...
+	Subtract Register
+	Store
+	Halt
+Execution complete.
+
+User 2 Page Table
+Page 	| 	Frame
+0 	| 	58
+		232:	x0819    
+		233:	x1006    
+		234:	x0905    
+		235:	x5100    
+1 	| 	43
+		172:	x1007    
+		173:	xF000    
+		174:	x0019    
+		175:	x0014    
+
+User 2 process removed from queue 2
+
+Priority Queues
+---------------
+One:   
+Two:   0   
+
+
+User 2: nop
+
+No request added
+
+User 1 Running...
+	Add Register
+	Store
+	Halt
+Execution complete.
+
+User 1 Page Table
+Page 	| 	Frame
+0 	| 	50
+		200:	x080A    
+		201:	x1006    
+		202:	x0905    
+		203:	x4100    
+1 	| 	59
+		236:	x1007    
+		237:	xF000    
+		238:	x000A    
+		239:	x000F    
+
+User 1 process removed from queue 2
+
+Priority Queues
+---------------
+One:   
+Two:   
+
+
+Operating System: s stp
+
+Priority 1 request added
+
+User 0 process removed from queue 1
+---------------------------------
+	DUMP START
+---------------------------------
+
+Clock: 18
+
+REGISTERS
+---------------------------------
+A	x000F    
+1	x0005    
+2	x0000    
+3	x0000    
+PC	x00EE    
+CC	x0001    
+IR	xF000    
+
+MEMORY
+---------------------------------
+24 	x1007    UNLOCKED
+25 	xF000    UNLOCKED
+26 	x000A    UNLOCKED
+27 	x000F    UNLOCKED
+40 	x0819    UNLOCKED
+41 	x1006    UNLOCKED
+42 	x0905    UNLOCKED
+43 	x5100    UNLOCKED
+52 	x1007    UNLOCKED
+53 	xF000    UNLOCKED
+54 	x000A    UNLOCKED
+55 	x000F    UNLOCKED
+68 	x080A    UNLOCKED
+69 	x1006    UNLOCKED
+70 	x0905    UNLOCKED
+71 	x4100    UNLOCKED
+156	x080A    UNLOCKED
+157	x1006    UNLOCKED
+158	x0905    UNLOCKED
+159	x4100    UNLOCKED
+164	x080A    UNLOCKED
+165	x1006    UNLOCKED
+166	x0905    UNLOCKED
+167	x4100    UNLOCKED
+172	x1007    UNLOCKED
+173	xF000    UNLOCKED
+174	x0019    UNLOCKED
+175	x0014    UNLOCKED
+176	x1007    UNLOCKED
+177	xF000    UNLOCKED
+178	x0019    UNLOCKED
+179	x0014    UNLOCKED
+200	x080A    UNLOCKED
+201	x1006    UNLOCKED
+202	x0905    UNLOCKED
+203	x4100    UNLOCKED
+204	x1007    UNLOCKED
+205	xF000    UNLOCKED
+206	x0019    UNLOCKED
+207	x0014    UNLOCKED
+232	x0819    UNLOCKED
+233	x1006    UNLOCKED
+234	x0905    UNLOCKED
+235	x5100    UNLOCKED
+236	x1007    UNLOCKED
+237	xF000    UNLOCKED
+238	x000A    UNLOCKED
+239	x000F    UNLOCKED
+252	x1007    UNLOCKED
+253	xF000    UNLOCKED
+254	x000A    UNLOCKED
+255	x000F    UNLOCKED
+
+DISK
+---------------------------------
+0  	x080A    
+1  	x1006    
+2  	x0905    
+3  	x4100    
+4  	x1007    
+5  	xF000    
+6  	x0000    
+7  	x0000    
+100	x0819    
+101	x1006    
+102	x0905    
+103	x5100    
+104	x1007    
+105	xF000    
+106	x0000    
+107	x0000    
+
+Priority Queues
+---------------
+One:   
+Two:   
+
+---------------------------------
+	DUMP COMPLETE
+---------------------------------
+
+
+---------------------------------
+	MACHINE HALTED
+---------------------------------
+]0;cs441104@cs:~/os_part5[cs441104@cs os_part5]$ exit
+exit
+
+Script done on Wed 24 Apr 2013 01:11:16 PM CDT

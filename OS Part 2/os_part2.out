@@ -1,0 +1,175 @@
+Script started on Tue 19 Feb 2013 11:52:58 PM CST
+]0;cs441102@cs:~/OS Part 2[cs441102@cs OS Part 2]$ ./os_part2 [K
+
+	User 1
+Please enter a command: run
+
+
+User 1 Running...
+	Load
+	Store
+	Load
+
+	User 2
+Please enter a command: run
+
+Memory is locked. Your process has been added to the queue.
+
+	O/S
+Please enter a command: dmp
+
+REGISTERS
+---------------------------------
+A    x000A    0000 0000 0000 1010 
+1    x0005    0000 0000 0000 0101 
+2    x0000    0000 0000 0000 0000 
+3    x0000    0000 0000 0000 0000 
+PC   x0003    0000 0000 0000 0011 
+CC   x0001    0000 0000 0000 0001 
+IR   x0905    0000 1001 0000 0101 
+Clock: 6
+
+MEMORY
+---------------------------------
+0    x080A    0000 1000 0000 1010 
+1    x1006    0001 0000 0000 0110 
+2    x0905    0000 1001 0000 0101 
+3    x4100    0100 0001 0000 0000 
+4    x1007    0001 0000 0000 0111 
+5    xF000    1111 0000 0000 0000 
+6    x000A    0000 0000 0000 1010 
+100  x0819    0000 1000 0001 1001 
+101  x106A    0001 0000 0110 1010 
+102  x0905    0000 1001 0000 0101 
+103  x5100    0101 0001 0000 0000 
+104  x1007    0001 0000 0000 0111 
+105  xF000    1111 0000 0000 0000 
+
+DISK
+---------------------------------
+0    x080A    0000 1000 0000 1010 
+1    x1006    0001 0000 0000 0110 
+2    x0905    0000 1001 0000 0101 
+3    x4100    0100 0001 0000 0000 
+4    x1007    0001 0000 0000 0111 
+5    xF000    1111 0000 0000 0000 
+100  x0819    0000 1000 0001 1001 
+101  x106A    0001 0000 0110 1010 
+102  x0905    0000 1001 0000 0101 
+103  x5100    0101 0001 0000 0000 
+104  x1007    0001 0000 0000 0111 
+105  xF000    1111 0000 0000 0000 
+
+MEMORY LOCK STATUS: Locked
+
+PROCESS QUEUE
+---------------------------------
+Process Owner	Mem Location	Locked Memory	
+	1		3		*
+	2		100		-
+
+---------------------------------
+DUMP COMPLETE
+---------------------------------
+
+User 1 Running...
+	Add Register
+	Store
+	Halt
+Execution complete.
+
+	User 1
+Please enter a command: run
+
+Memory is locked. Your process has been added to the queue.
+
+User 2 Running...
+	Load
+	Store
+	Load
+	Subtract Register
+
+	O/S
+Please enter a command: nop
+
+	No operation performed.
+
+	User 1
+Please enter a command: nop
+
+	No operation performed.
+
+User 2 Running...
+	Store
+	Halt
+Execution complete.
+
+	User 2
+Please enter a command: nop
+
+	No operation performed.
+
+	O/S
+Please enter a command: stp
+
+REGISTERS
+---------------------------------
+A    x0014    0000 0000 0001 0100 
+1    x0005    0000 0000 0000 0101 
+2    x0000    0000 0000 0000 0000 
+3    x0000    0000 0000 0000 0000 
+PC   x006A    0000 0000 0110 1010 
+CC   x0001    0000 0000 0000 0001 
+IR   xF000    1111 0000 0000 0000 
+Clock: 21
+
+MEMORY
+---------------------------------
+0    x080A    0000 1000 0000 1010 
+1    x1006    0001 0000 0000 0110 
+2    x0905    0000 1001 0000 0101 
+3    x4100    0100 0001 0000 0000 
+4    x1007    0001 0000 0000 0111 
+5    xF000    1111 0000 0000 0000 
+6    x000A    0000 0000 0000 1010 
+7    x0014    0000 0000 0001 0100 
+100  x0819    0000 1000 0001 1001 
+101  x106A    0001 0000 0110 1010 
+102  x0905    0000 1001 0000 0101 
+103  x5100    0101 0001 0000 0000 
+104  x1007    0001 0000 0000 0111 
+105  xF000    1111 0000 0000 0000 
+106  x0019    0000 0000 0001 1001 
+
+DISK
+---------------------------------
+0    x080A    0000 1000 0000 1010 
+1    x1006    0001 0000 0000 0110 
+2    x0905    0000 1001 0000 0101 
+3    x4100    0100 0001 0000 0000 
+4    x1007    0001 0000 0000 0111 
+5    xF000    1111 0000 0000 0000 
+100  x0819    0000 1000 0001 1001 
+101  x106A    0001 0000 0110 1010 
+102  x0905    0000 1001 0000 0101 
+103  x5100    0101 0001 0000 0000 
+104  x1007    0001 0000 0000 0111 
+105  xF000    1111 0000 0000 0000 
+
+MEMORY LOCK STATUS: Unlocked
+
+PROCESS QUEUE
+---------------------------------
+Process Owner	Mem Location	Locked Memory	
+	1		0		-
+
+---------------------------------
+DUMP COMPLETE
+---------------------------------
+
+	Machine halted.
+
+]0;cs441102@cs:~/OS Part 2[cs441102@cs OS Part 2]$ exit
+exit
+
+Script done on Tue 19 Feb 2013 11:53:42 PM CST

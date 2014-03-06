@@ -1,0 +1,56 @@
+Instruction Set Description
+---------------------------
+
+
+operand  = immediate value or value at memory address
+
+register = any register, 0-3
+
+
+
+LOD	- Load operand into register
+
+
+STO	- Store register into memory address (no immediate)
+
+
+ADD - Add operand to accumulator; result in register
+
+
+SUB	- Subtract operand from accumulator; result in register
+
+
+ADR - Add register to accumulator; result in accumulator
+
+
+SUR - Subtract register from accumulator; result in accumulator
+
+
+AND - 'And' the operand with the accumulator; result in register
+
+
+IOR - 'Or' the operand with the accumulator; result in register
+
+
+NOT - 'Not' the register; result in register
+
+
+JMP - Set the PC to the immediate value unconditionally
+
+
+JEQ - Set the PC to the immediate value if the CC = 2
+
+
+JGT - Set the PC to the immediate value if the CC = 1
+
+
+JLT - Set the PC to the immediate value if the CC = 4
+
+
+CMP - Set the CC based on the value of register
+
+
+CLR - Clear the register
+
+
+HLT - Set halt flag = 1
